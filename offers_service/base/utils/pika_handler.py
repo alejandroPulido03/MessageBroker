@@ -6,7 +6,7 @@ import pika
 class PikaHandler:
 
     def __init__(self):
-        self._connection_params = pika.ConnectionParameters(os.getenv('RABBITMQ_HOST'))
+        self._connection_params = pika.ConnectionParameters('localhost')
         self.connection = None
         self.channel = None
         self.queue_name = None

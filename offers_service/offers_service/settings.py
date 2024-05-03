@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-u(gab$sc&ufx6r8$!zsy2mka=k*(8roj-gjjl$_4&3xwlfynug
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '127.0.0.2'
+]
 
 
 # Application definition
@@ -81,7 +83,7 @@ DATABASES = {
         'NAME': 'offers_service',
         'USER': 'los_full_stack_overflow',
         'PASSWORD': 'los_full_stack_underflow',
-        'HOST': '172.17.0.2',
+        'HOST': '172.17.0.3',
         'PORT': '5432',
     }
 }

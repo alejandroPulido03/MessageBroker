@@ -1,9 +1,17 @@
 from rest_framework import serializers
 
 
-class UserContactDataSerializer(serializers.ModelSerializer):
+class UserSerializer(serializers.Serializer):
     id = serializers.IntegerField()
-    name = serializers.CharField()
-    last_name = serializers.CharField()
+    nombre = serializers.CharField()
+    apellido = serializers.CharField()
+    ciudad = serializers.CharField()
     email = serializers.EmailField()
-    phone = serializers.CharField()
+    celular = serializers.CharField()
+    actividadEconomica = serializers.CharField()
+    empresa = serializers.CharField()
+    ingresos = serializers.FloatField()
+    pasivos = serializers.FloatField()
+
+    class Meta:
+        fields = '__all__'
