@@ -19,8 +19,7 @@ class TwilioClient:
                 to=to,
                 body=body
             )
+            return message.sid
         except Exception as e:
             print(e)
-            return message.sid
-
-        return message.sid
+            return None
