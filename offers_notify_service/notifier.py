@@ -1,7 +1,6 @@
 import json
 
 import pika
-
 from twilioHandler import TwilioClient
 
 client = TwilioClient()

@@ -13,9 +13,14 @@ class TwilioClient:
         self.client = Client(self._account_sid, self._auth_token)
 
     def send_message(self, to, body):
-        message = self.client.messages.create(
-            from_=self._from,
-            to=to,
-            body=body
-        )
+        try:
+            message = self.client.messages.create(
+                from_=self._from,
+                to=to,
+                body=body
+            )
+        except Exception as e:
+            print(e)
+            return message.sid
+
         return message.sid
